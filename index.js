@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
@@ -19,7 +21,7 @@ main()
 .catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/fakewhatsapp');
+  await mongoose.connect(process.env.MONGO_URL);
 
 }
 
@@ -45,23 +47,6 @@ app.get("/chats/new", (req,res) => {
 //    throw new ExpressError(404, "Page not found");
     res.render("new.ejs")
 })
-
-// //Create Route
-// app.post("/chats", (req,res) => {
-//     let {from,to,msg} = req.body;
-//     let newChat = new Chat({
-//         from : from,
-//         to: to,
-//         msg: msg,
-//         created_at: new Date()
-//     });
-
-//     newChat.save()
-//     .then((res) => {console.log("chat was saved")})  //its asyan func but we do not write cause we use then 
-//     .catch((err)=> {next(err)});
-//     res.redirect("/chats");
-// });
-
 
 //Create Route
 app.post("/chats", asyncWrap(async (req,res, next) => {
@@ -101,8 +86,6 @@ app.get("/chats/:id/edit", asyncWrap(async(req,res,next) => {
     
 }));
 
-
-
 //Update route
 app.put("/chats/:id", async (req,res,next) => {
     try {
@@ -117,7 +100,6 @@ app.put("/chats/:id", async (req,res,next) => {
     } catch(err) {
         next(err);
     }
-    
 })
 
 //Delete route
@@ -132,10 +114,6 @@ app.delete("/chats/:id", async (req,res,next) => {
     }
     
 })
-
-// function deleteChat(_id) {
-    
-// }
 
 const handleValidationErr = (err) => {
     console.log("This is Validation error. please follow rules");
@@ -158,12 +136,10 @@ app.use((err,req,res,next) => {
     res.status(status).send(message);
 })
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
     console.log("server is listening on port 8080");
 });
 
-//hw is updated_at add fiild
-
 //we use asynWrap function as try catch means instead of try catch we use 
 // asyancwrap function to wrap the callback err in last two function in update
-//  and delete i am not using asynwrap you can use their also
+//and delete i am not using asynwrap you can use their also
