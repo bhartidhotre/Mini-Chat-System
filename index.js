@@ -26,7 +26,7 @@ async function main() {
 }
 
 app.get("/", (req,res) => {
-    res.send("Hello Devlopers");
+    res.redirect("/chats");
 })
 
 function asyncWrap(fn) {
@@ -136,7 +136,9 @@ app.use((err,req,res,next) => {
     res.status(status).send(message);
 })
 
-app.listen(process.env.PORT, () => {
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
     console.log("server is listening on port 8080");
 });
 
