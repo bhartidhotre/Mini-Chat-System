@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px;
+
+    /* Dark Premium Gradient */
+    background: linear-gradient(135deg, #141e30, #243b55);
+
+
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* App Container */
+.app {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Title */
+.title {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* New Chat Button */
+.new-chat {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.primary-btn {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: #1ebe5d;
+}
+
+/* Chat Card */
+.chat {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+/* Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Message Bubble */
+.msg {
+    background-color: #dcf8c6;
+    padding: 12px;
+    border-radius: 12px;
+    max-width: 80%;
+}
+
+
+.msg p {
+    color: #222;
+    line-height: 1.4;
+}
+
+/* Footer */
+.chat-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions form {
+    display: inline;
+}
+
+.actions button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Button Colors */
+.edit {
+    background-color: #ffd966;
+}
+
+.edit:hover {
+    background-color: #f1c232;
+}
+
+.delete {
+    background-color: #f28b82;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #e06666;
+}
+
+.show {
+    background-color: #8ab4f8;
+    color: white;
+}
+
+.show:hover {
+    background-color: #6d9eeb;
+}
+
+.chat {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
