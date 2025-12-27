@@ -58,34 +58,6 @@ This project helps in learning and practicing:
 - Render
 
 ---
-
-## 📂 Project Structure
-
-Mini-Chat-System
-│
-├── models
-│   └── chat.js
-│
-├── public
-│   └── style.css
-│
-├── views
-│   ├── edit.ejs
-│   ├── index.ejs
-│   └── new.ejs
-│
-├── .gitignore
-├── ExpressError.js
-├── index.js
-├── init.js
-├── package-lock.json
-├── package.json
-└── README.md
-
-
----
-
-
 ## ⚙️ Installation & Setup
 
 1. Clone the repository
