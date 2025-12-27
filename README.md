@@ -61,15 +61,15 @@ This project helps in learning and practicing:
 
 ## 📂 Project Structure
 
-Mini-Chat-System/
+Mini-Chat-System
 │
-├── models/
+├── models
 │   └── chat.js
 │
-├── public/
+├── public
 │   └── style.css
 │
-├── views/
+├── views
 │   ├── edit.ejs
 │   ├── index.ejs
 │   └── new.ejs
@@ -81,6 +81,7 @@ Mini-Chat-System/
 ├── package-lock.json
 ├── package.json
 └── README.md
+
 
 ---
 
@@ -125,7 +126,7 @@ http://localhost:8080
 - This project is built only for educational purposes.
 - It does not include authentication or real-time chat functionality.
 
-  ---
+---
 
 ## 👩‍💻 Author
 
